@@ -14,8 +14,9 @@ html,body{
 }
 
 section.agendamento .conteudo-full{
-    background: #A64CFF;
+    background: linear-gradient(to bottom, #A64CFF, #d9b3ff);
     width: 100%;
+    
 }
 
 section.agendamento .text-content{
