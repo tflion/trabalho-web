@@ -44,13 +44,17 @@ section.agendamento .text-agend p{
     margin-top: 20px;
 }
 
+
 section.agendamento .formulario{
     width: 80%;
     background-color: white;
     color: #AB57FF;
     border-radius: 20px;
-    margin-top: 120px;
+    margin-top: 100px;
     padding: 20px;
+    -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
 }
 
 section.agendamento .formulario form{
@@ -137,6 +141,7 @@ section.agendamento textarea::placeholder{
     -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    margin-top: 20px;
 }
 
 
@@ -147,5 +152,17 @@ section.agendamento textarea::placeholder{
 
 section.agendamento .logo-agendamento{
     margin-left: 720px;
-    margin-top: 20px;
+    position:relative; 
+    top: -3px;
 }
+
+section.agendamento .voltar a{
+    position: relative;
+    top: 8px;
+    text-decoration: none;
+}
+
+section.agendamento .voltar a:hover{
+    color: lightseagreen;
+}
+
