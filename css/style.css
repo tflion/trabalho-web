@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+html,body{
+    height: 100%;
+}
+
+.clear{
+    clear: both;
+}
+
+section.agendamento .conteudo-full{
+    background: #A64CFF;
+    width: 100%;
+}
+
+section.agendamento .text-content{
+    width: 50%;
+    float: left;
+}
+
+section.agendamento .form-content{
+    width: 50%;
+    float: right;
+}
+
+section.agendamento .text-agend{
+    color: white;
+}
+
+section.agendamento .text-agend h2{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+section.agendamento .text-agend p{
+    width: 65%;
+    font-size: 30px;
+    font-weight: normal;
+    margin-top: 20px;
+}
+
+section.agendamento .formulario{
+    width: 80%;
+    background-color: white;
+    color: #AB57FF;
+    border-radius: 20px;
+    margin-top: 120px;
+    padding: 20px;
+}
+
+section.agendamento .formulario form{
+    width: 100%;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.form-wraper{
+    float: left;
+    margin-top: 12px;
+    padding: 0 20px;
+}
+
+.w100{
+    width: 100%;
+}
+
+.w50{
+    width: 50%;
+}
+
+section.agendamento .form-wraper span{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+section.agendamento .form-wraper input[type=text], input[type=time], input[type=date], select{
+    width: 100%;
+    height: 50px;
+    margin-top: 8px;
+    line-height: 50px;
+    padding-left: 15px;
+    border-radius: 30px;
+    border: none;
+    background-color: #AB57FF;
+    color: white;
+    font-size: 18px;
+    -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);  
+}
+
+section.agendamento ::placeholder{
+    color: white;
+    font-size: 17px;
+}
+
+section.agendamento select{
+    cursor: pointer;
+}
+
+section.agendamento .form-wraper textarea{
+    position: relative;
+    left: -15%;
+    width: 130%;
+    padding: 15px 15px 15px 25px;
+    margin-top: 10px;
+    height: 137px;
+    resize: none;
+    border: none;
+    background-color: #AB57FF;
+    border-radius: 35px;
+    -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    font-size: 18px;
+    color: white;
+}
+
+section.agendamento textarea::placeholder{
+    font-size: 20px;
+    padding: 45px 15px 15px 25px;
+}
+
+.form-wraper input[type=submit]{
+    width: 148px;
+    height: 42px;
+    border-radius: 25px;
+    border: none;
+    color: white;
+    background-color: #5914fa;
+    cursor: pointer;
+    -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+}
+
+
+.form-wraper input[type=submit]:hover{
+    background-color: #5f09b5;
+}
+
+
+section.agendamento .logo-agendamento{
+    margin-left: 720px;
+    margin-top: 20px;
+}
