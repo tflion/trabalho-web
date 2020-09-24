@@ -99,6 +99,10 @@ section.agendamento .form-wraper input[type=text], input[type=time], input[type=
     box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);  
 }
 
+section.agendamento .form-wraper input[type=text]:hover, input[type=time]:hover, input[type=date]:hover, select:hover{
+    border: 5px solid #597bff ;
+}
+
 section.agendamento ::placeholder{
     color: white;
     font-size: 17px;
@@ -124,6 +128,10 @@ section.agendamento .form-wraper textarea{
     box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     font-size: 18px;
     color: white;
+}
+
+section.agendamento textarea:hover{
+    border: 5px solid #597bff ;
 }
 
 section.agendamento textarea::placeholder{
