@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+html, body {
+  background-image: linear-gradient(#B367FF, #A64CFF);
+}
+
+ .esquerda {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 768px) {
+  .esquerda{
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .esquerda {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .esquerda {
+    width: 1170px;
+  }
+}
+
+@media (max-width: 1430px) {
+  .desktop {
+    margin-right: 50px;
+  }
+}
+
+#fp-nav {
+  position: fixed;
+  z-index: 100;
+  margin-top: -32px;
+  top: 50%;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+#fp-nav.right {
+  right: 17px;
+}
+
+#fp-nav.left {
+  left: 17px;
+}
+
+#fp-nav ul li, .fp-slidesNav ul li {
+  display: block;
+  width: 14px;
+  height: 13px;
+  margin: 7px;
+  position: relative;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 4px;
+  width: 4px;
+  border: 0;
+  background: #333;
+  left: 50%;
+  top: 50%;
+  margin: -2px 0 0 -2px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+#fp-nav ul li .fp-tooltip {
+  position: absolute;
+  top: -2px;
+  color: #fff;
+  font-size: 14px;
+  font-family: arial, helvetica, sans-serif;
+  white-space: nowrap;
+  max-width: 220px;
+  overflow: hidden;
+  display: block;
+  opacity: 0;
+  width: 0;
+}
+
+#fp-nav ul li a span, .fp-slidesNav ul li a span {
+  background: white;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+}
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+  width: 16px;
+  height: 16px;
+  margin: -8px 0 0 -8px;
+  background: transparent;
+  box-sizing: border-box;
+  border: 2px solid white;
+}
+
+.direita {
+  width: 50%;
+  text-align: center;
+  padding: 10vw 0vw 5vw 0vw;
+  float: right;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 17%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.esquerda {
+  width: 50%;
+  margin-top: 8vw;
+  float: left;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  display: block;
+}
+
+.direita h1 {
+  color: white;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.bem-vindo {
+  margin-bottom: 40px;
+}
+
+.mensagem-top {
+  margin-bottom: 30px;
+}
+
+.mensagem-bottom {
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.direita h3 {
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.login {
+  outline-style: none;
+  background: white;
+  color: #1A0044;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  border-radius: 40px;
+  width: 150px;
+  height: 40px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.login:hover {
+  box-shadow: 0px 4px 20px white
+}
+
+.login:focus {
+  background-color: #B367FF;
+}
+
+.conheca {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 30px;
+  text-decoration-line: underline;
+  color: white;
+}
+
+.conheca:hover {
+  color: #1A0044;
+}
+
+.criar-conta {
+  padding-top: 30px;
+  font-weight: 500;
+  color: white;
+  text-decoration-line: underline;
+}
+
+.criar-conta:hover {
+  color: #1A0044;
+  cursor: pointer;
+}
+
+.center {
+  width: 60%;
+  margin: 0px 160px;
+  box-sizing: border-box;
+  border: 1px solid red;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+}
+
+.logo-div {
+  width: 300px;
+  height: 250px;
+}
+
+.logo {
+  width: 200px;
+  height: 250px;
+}
+
+.couch-div {
+  width: 350px;
+  height: 340px;
+}
+.couch {
+  height: 330px;
+}
+
+@media (min-height: 947px) {
+  .couch {
+    height: 600px;
+  }
+}
+
+.esquerda-couch {
+  margin-top: 32%;
+}
+
+.center-esquerda{
+  margin-top: -50px;
+}
