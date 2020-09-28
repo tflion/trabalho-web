@@ -7,6 +7,9 @@
 
 html,body{
     height: 100%;
+    background: linear-gradient(90deg, rgba(76,2,150,1) 0%,
+     rgba(213,71,220,1) 67%,
+     rgba(252,164,255,1) 100%);
 }
 
 .clear{
@@ -14,16 +17,15 @@ html,body{
 }
 
 section.agendamento .conteudo-full{
-    background: linear-gradient(to bottom, #A64CFF, #d9b3ff);
     width: 100%;
-    
+    position: absolute;
+    height: 100%;
 }
 
 section.agendamento .text-content{
     width: 50%;
     float: left;
 }
-
 section.agendamento .form-content{
     width: 50%;
     float: right;
@@ -42,32 +44,45 @@ section.agendamento .text-agend p{
     width: 65%;
     font-size: 30px;
     font-weight: normal;
-    margin-top: 20px;
+}
+
+section.agendamento .text-content .patas{
+    width: 260px;
+    height: 200px;
+    padding-left: 10px;
+}
+
+section.agendamento .text-content .img-doctor{
+    width: 500px;
+    height: 340px;
+    position: absolute;
+    bottom: 5px;
+    left: 30px;
 }
 
 
 section.agendamento .formulario{
-    width: 80%;
+    width: 70%;
     background-color: white;
     color: #AB57FF;
     border-radius: 20px;
-    margin-top: 100px;
     padding: 20px;
     -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    margin: 8%  auto 0 auto;
 }
 
 section.agendamento .formulario form{
-    width: 100%;
-    max-width: 450px;
+    width: 90%;
+    max-width: 420px;
     margin: 0 auto;
 }
 
 .form-wraper{
     float: left;
-    margin-top: 12px;
-    padding: 0 20px;
+    margin-top: 10px;
+    padding: 0 10px;
 }
 
 .w100{
@@ -88,24 +103,29 @@ section.agendamento .form-wraper input[type=text], input[type=time], input[type=
     height: 50px;
     margin-top: 8px;
     line-height: 50px;
-    padding-left: 15px;
+    padding-left: 12px;
     border-radius: 30px;
     border: none;
     background-color: #AB57FF;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);  
+    outline-style: none;
 }
 
 section.agendamento .form-wraper input[type=text]:hover, input[type=time]:hover, input[type=date]:hover, select:hover{
     border: 5px solid #597bff ;
 }
 
+section.agendamento .form-wraper input[type=text]:focus, input[type=time]:focus, input[type=date]:focus, select:focus{
+    border: 5px solid #597bff ;
+}
+
 section.agendamento ::placeholder{
     color: white;
-    font-size: 17px;
+    font-size: 16px;
 }
 
 section.agendamento select{
@@ -114,11 +134,11 @@ section.agendamento select{
 
 section.agendamento .form-wraper textarea{
     position: relative;
-    left: -15%;
-    width: 130%;
+    left: -8%;
+    width: 115%;
     padding: 15px 15px 15px 25px;
     margin-top: 10px;
-    height: 137px;
+    height: 120px;
     resize: none;
     border: none;
     background-color: #AB57FF;
@@ -126,22 +146,107 @@ section.agendamento .form-wraper textarea{
     -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
     box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    font-size: 18px;
+    font-size: 16px;
     color: white;
+    outline-style: none;
+}
+
+section.agendamento input[type=time],input[type=date],input[type=time],input[type=time]{
+    cursor: text ; 
+}
+
+
+/* Se for mozilla*/
+input[type=date]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../../images/Vector.png);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    cursor: pointer;
+}
+
+input[type=time]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../../images/clock.png);
+    background-repeat: no-repeat;
+    background-position-x: 90%;
+    background-position-y: 50%;
+    cursor: pointer;
+}
+
+input[type="time"]::-moz-clear-button {
+    width: 0;
+    height: 0;
+}
+
+/*   Se for Chrome ou Safari*/
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../images/Vector.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+    position: relative;
+    left: -7px;
+    cursor: pointer;
+}
+
+input[type="time"]::-webkit-calendar-picker-indicator {
+    color: rgba(0, 0, 0, 0);
+    opacity: 1;
+    display: block;
+    background: url(../images/clock.png) no-repeat;
+    width: 20px;
+    height: 20px;
+    border-width: thin;
+    position: relative;
+    left: -8px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance:none; /* Firefox */
+}
+
+
+
+section.agendamento .form-wraper select{
+    -webkit-appearance: none;
+    -moz-appearance:none; /* Firefox */
+    appearance: none;
+    background-image: url(../../images/setaSelect.png);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
 }
 
 section.agendamento textarea:hover{
-    border: 5px solid #597bff ;
+    border: 5px solid #597bff;
+    font-size: 17px;
+}
+
+section.agendamento textarea:focus{
+    border: 5px solid #597bff;
 }
 
 section.agendamento textarea::placeholder{
-    font-size: 20px;
-    padding: 45px 15px 15px 25px;
+    font-size: 17px;
+    padding: 35px 15px 15px 25px;
+    color: white;
+}
+
+
+section.agendamento textarea::-moz-placeholder, input[type=text]::-moz-placeholder { 
+    color:white;
+    opacity: 1;
 }
 
 .form-wraper input[type=submit]{
-    width: 148px;
-    height: 42px;
+    width: 130px;
+    height: 40px;
     border-radius: 25px;
     border: none;
     color: white;
@@ -160,9 +265,9 @@ section.agendamento textarea::placeholder{
 
 
 section.agendamento .logo-agendamento{
-    margin-left: 720px;
-    position:relative; 
-    top: -3px;
+    left: 95%;
+    position: absolute;
+    bottom: 10px;
 }
 
 section.agendamento .voltar a{
@@ -174,4 +279,3 @@ section.agendamento .voltar a{
 section.agendamento .voltar a:hover{
     color: lightseagreen;
 }
-
