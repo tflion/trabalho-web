@@ -365,4 +365,66 @@ html, body {
   }
 }
 
+.direita-quemsomos{
+  display: block;
+  float: right;
+  width: 50%;
+  text-align: center;
+  margin-top: 10%;
+  padding-right: 35px;
+}
+
+.direita-quemsomos h1{
+  color: white;
+  font-weight: bold;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.direita-quemsomos h3{
+  color: white;
+  font-weight: 500;
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 40px;
+}
+
+.direita-quemsomos h5{
+  color: white;
+  font-weight: 500;
+  font-size: 30px;
+  line-height: 34px;
+}
+
+@media (min-width: 1431px) {
+  .direita-quemsomos {
+   padding-right: 50px;
+  }
+}
+
+.gato {
+  display: flex;
+  margin: 0 auto;
+  height: 300px;
+}
+
+@media (min-height: 947px) {
+  .gato {
+    margin-top: 90px;
+    height: 480px !important;
+  }
+}
+
+.center-esquerda-quemsomos {
+  margin-left: 30px;
+  margin-top: -50px;
+}
+
+@media (min-height: 758px) {
+  .gato {
+    height: 390px;
+  }
+}
+
+
 
