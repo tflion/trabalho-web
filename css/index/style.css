@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Quicksand', sans-serif;
 }
 
 html, body {
@@ -148,6 +148,7 @@ html, body {
 }
 
 .bem-vindo {
+  font-family: ;
   margin-bottom: 40px;
 }
 
@@ -321,7 +322,7 @@ html, body {
 .card-title{
   color: white;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 25px;
 }
 
 .image-aquario {
