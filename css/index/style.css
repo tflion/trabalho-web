@@ -33,9 +33,6 @@ html, body {
   .main-desktop {
     display: none;
   }
-  .inicio-mobile {
-    height: 100vh;
-  }
   .text-centered-mobile {
     text-align: center;
   }
@@ -44,22 +41,22 @@ html, body {
     height: 150px;
   }
   .div-logo-mobile {
-    margin-top: 5%;
-    margin-bottom: 5%;
+    margin-top: 10%;
+    margin-bottom: 10%;
   }
   .bem-vindo-mobile {
     color: white;
     text-decoration: none;
     font-size: 30px;
     font-weight: bold;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
   .messege-mobile {
     color: white;
     text-decoration: none;
     font-size: 20px;
     font-weight: bold;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
   .login-mobile {
     outline-style: none !important;
@@ -73,7 +70,7 @@ html, body {
     height: 40px;
     box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
     cursor: pointer;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
   }
   .login-mobile:hover {
     box-shadow: 0px 4px 20px white;
@@ -191,9 +188,6 @@ html, body {
       width: 200px;
       height: 200px;
     }
-  }
-  .quem-somos-mobile {
-    height: 100vh;
   }
   .text-quem-somos-mobile {
     text-align: center;
