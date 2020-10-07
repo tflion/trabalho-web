@@ -9,423 +9,588 @@ html, body {
   background-image: linear-gradient(#B367FF, #A64CFF);
 }
 
-.esquerda {
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (min-width: 768px) {
-  .esquerda {
-    width: 750px;
-  }
-}
-
-@media (min-width: 992px) {
-  .esquerda {
-    width: 970px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .esquerda {
-    width: 1170px;
-  }
-}
-
-@media (max-width: 1430px) {
-  .desktop {
-    margin-right: 50px;
-  }
-}
-
-#fp-nav {
-  position: fixed;
-  z-index: 100;
-  margin-top: -32px;
-  top: 50%;
-  opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-}
-
-#fp-nav.right {
-  right: 17px;
-}
-
-#fp-nav.left {
-  left: 17px;
-}
-
-#fp-nav ul li, .fp-slidesNav ul li {
-  display: block;
-  width: 14px;
-  height: 13px;
-  margin: 7px;
-  position: relative;
-}
-
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
-  border-radius: 50%;
-  position: absolute;
-  z-index: 1;
-  height: 4px;
-  width: 4px;
-  border: 0;
-  background: #333;
-  left: 50%;
-  top: 50%;
-  margin: -2px 0 0 -2px;
-  -webkit-transition: all 0.1s ease-in-out;
-  -moz-transition: all 0.1s ease-in-out;
-  -o-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-#fp-nav ul li .fp-tooltip {
-  position: absolute;
-  top: -2px;
-  color: #fff;
-  font-size: 14px;
-  font-family: arial, helvetica, sans-serif;
-  white-space: nowrap;
-  max-width: 220px;
-  overflow: hidden;
-  display: block;
-  opacity: 0;
-  width: 0;
-}
-
-#fp-nav ul li a span, .fp-slidesNav ul li a span {
+::selection {
+  color: #B367FF;
   background: white;
-  width: 8px;
-  height: 8px;
-  margin: -4px 0 0 -4px;
 }
 
-#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
-  width: 16px;
-  height: 16px;
-  margin: -8px 0 0 -8px;
-  background: transparent;
-  box-sizing: border-box;
-  border: 2px solid white;
+/* Mobile CSS */
+
+@media screen and (min-width: 0px) and (max-width: 1024px) {
+  html {
+    scroll-behavior: smooth;
+  }
+  .wrapper {
+    scroll-snap-type: y mandatory !important;
+  }
+  .children {
+    scroll-snap-align: start !important;
+    scroll-snap-stop: normal;
+  }
+  .main-mobile {
+    display: block;
+  }
+  .main-desktop {
+    display: none;
+  }
+  .inicio-mobile {
+    height: 100vh;
+  }
+  .text-centered-mobile {
+    text-align: center;
+  }
+  .logo-mobile {
+    width: 100px;
+    height: 150px;
+  }
+  .div-logo-mobile {
+    margin-top: 5%;
+    margin-bottom: 5%;
+  }
+  .bem-vindo-mobile {
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 5%;
+  }
+  .messege-mobile {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5%;
+  }
+  .login-mobile {
+    outline-style: none !important;
+    background: white;
+    color: #1A0044;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 40px;
+    width: 150px;
+    height: 40px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-bottom: 5%;
+  }
+  .login-mobile:hover {
+    box-shadow: 0px 4px 20px white;
+  }
+  .login-mobile:focus {
+    background-color: #B367FF;
+  }
+  .nossos-servicos-mobile {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 5%;
+  }
+  .nossos-servicos-mobile:hover {
+    color: #7241a3;
+    cursor: pointer;
+  }
+  .nossos-servicos-mobile:focus {
+    color: #7241a3;
+    cursor: pointer;
+  }
+  .create-account-mobile {
+    color: white;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 5%;
+  }
+  .create-account-mobile:hover {
+    color: #7241a3;
+    cursor: pointer;
+  }
+  .create-account-mobile:focus {
+    color: #7241a3;
+    cursor: pointer;
+  }
+  .title-mobile {
+    color: white;
+    font-weight: bold;
+    font-size: 17px;
+  }
+  .header-mobile button {
+    outline-style: none !important;
+    background: white;
+    color: #1A0044;
+    font-size: 7px;
+    font-weight: bold;
+    border: none;
+    border-radius: 40px;
+    width: 60px;
+    height: 25px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .header-mobile button:hover {
+    box-shadow: 0px 4px 20px white;
+  }
+  .header-mobile button:focus {
+    background-color: #B367FF;
+  }
+  .login-servicos-button-left {
+    margin-right: 10px;
+  }
+  .cards-div-mobile {
+    margin-top: 10%;
+    margin-bottom: 10%;
+  }
+  .cards-mobile {
+    margin: 0 auto;
+    background: #9B36FF !important;
+    box-shadow: 10px 10px 11px -1px rgba(0, 0, 0, 0.5);
+    border-radius: 30px !important;
+    width: 250px;
+    height: 250px;
+    line-height: 200px;
+    text-align: center;
+  }
+  .card-body {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+  }
+  @media screen and (max-width: 767px) {
+    .cards-mobile {
+      margin-bottom: 10%;
+    }
+    .images-serv-mobile {
+      display: none !important;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    .card-mobile-bottom {
+      margin-top: 10%;
+    }
+    .card-mobile-bottom {
+      margin-top: 10%;
+    }
+    .images-serv-mobile {
+      width: 100%;
+    }
+    .patas-div-mobile {
+      width: 100%;
+      margin-bottom: -1%;
+    }
+    .aquario-div-mobile {
+      width: 100%;
+      margin-bottom: -1%;
+    }
+    .aquario-mobile {
+      width: 400px;
+      position: absolute;
+    }
+    .patas-mobile {
+      width: 200px;
+      height: 200px;
+    }
+  }
+  .quem-somos-mobile {
+    height: 100vh;
+  }
+  .text-quem-somos-mobile {
+    text-align: center;
+  }
+  .title-quem-somos-mobile {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .content-quem-somos-mobile {
+    margin-top: 10%;
+  }
+  .messege-quem-somos-mobile {
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10%;
+  }
+  .div-image-quem-somos-mobile {
+    margin-top: 4%;
+    width: 100%;
+  }
+  .image-quem-somos-mobile {
+    width: 280px;
+  }
 }
 
-.direita {
-  width: 50%;
-  text-align: center;
-  padding: 10vw 0vw 5vw 0vw;
-  float: right;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-}
+/* Desktop CSS */
 
-.vertical-center {
-  margin: 0;
-  position: absolute;
-  top: 17%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-}
-
-.esquerda {
-  width: 50%;
-  margin-top: 8vw;
-  float: left;
-  top: 0;
-  bottom: 0;
-  display: flex;
-  display: block;
-}
-
-.direita h1 {
-  color: white;
-  font-size: 50px;
-  font-weight: bold;
-}
-
-.bem-vindo {
-  font-family: ;
-  margin-bottom: 40px;
-}
-
-.mensagem-top {
-  margin-bottom: 30px;
-}
-
-.mensagem-bottom {
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-
-.direita h3 {
-  color: white;
-  font-weight: 500;
-  font-size: 30px;
-  padding-bottom: 20px;
-}
-
-.login {
-  outline-style: none;
-  background: white;
-  color: #1A0044;
-  font-size: 15px;
-  font-weight: bold;
-  border: none;
-  border-radius: 40px;
-  width: 150px;
-  height: 40px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-.login:hover {
-  box-shadow: 0px 4px 20px white;
-}
-
-.login:focus {
-  background-color: #B367FF;
-}
-
-.conheca {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 30px;
-  text-decoration-line: underline;
-  color: white;
-}
-
-.conheca:hover {
-  color: #7241a3;
-}
-
-.criar-conta {
-  padding-top: 30px;
-  font-weight: 500;
-  color: white;
-  text-decoration-line: underline;
-}
-
-.criar-conta:hover {
-  color: #7241a3;
-  cursor: pointer;
-}
-
-.center {
-  width: 60%;
-  margin: 0px 160px;
-  box-sizing: border-box;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  padding-top: 1rem;
-}
-
-.logo-div {
-  width: 300px;
-  height: 250px;
-}
-
-.logo {
-  width: 200px;
-  height: 250px;
-}
-
-.couch-div {
-  width: 350px;
-  height: 340px;
-}
-
-.couch {
-  height: 325px;
-}
-
-@media (min-height: 947px) {
+@media screen and (min-width: 1025px) and (max-width: 3000px) {
+  .main-mobile {
+    display: none;
+  }
+  .main-desktop {
+    display: block;
+  }
+  #fp-nav {
+    position: fixed;
+    z-index: 100;
+    margin-top: -32px;
+    top: 50%;
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+  #fp-nav.right {
+    right: 17px;
+  }
+  #fp-nav.left {
+    left: 17px;
+  }
+  #fp-nav ul li, .fp-slidesNav ul li {
+    display: block;
+    width: 14px;
+    height: 13px;
+    margin: 7px;
+    position: relative;
+  }
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #333;
+    left: 50%;
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+  }
+  #fp-nav ul li .fp-tooltip {
+    position: absolute;
+    top: -2px;
+    color: #fff;
+    font-size: 14px;
+    font-family: arial, helvetica, sans-serif;
+    white-space: nowrap;
+    max-width: 220px;
+    overflow: hidden;
+    display: block;
+    opacity: 0;
+    width: 0;
+  }
+  #fp-nav ul li a span, .fp-slidesNav ul li a span {
+    background: white;
+    width: 8px;
+    height: 8px;
+    margin: -4px 0 0 -4px;
+  }
+  #fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+    width: 16px;
+    height: 16px;
+    margin: -8px 0 0 -8px;
+    background: transparent;
+    box-sizing: border-box;
+    border: 2px solid white;
+  }
+  .esquerda {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  @media (min-width: 768px) {
+    .esquerda {
+      width: 750px;
+    }
+  }
+  @media (min-width: 992px) {
+    .esquerda {
+      width: 970px;
+    }
+  }
+  @media (min-width: 1200px) {
+    .esquerda {
+      width: 1170px;
+    }
+  }
+  @media (max-width: 1430px) {
+    .desktop {
+      margin-right: 50px;
+    }
+  }
+  .direita {
+    width: 50%;
+    text-align: center;
+    padding: 10vw 0vw 5vw 0vw;
+    float: right;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+  }
+  .vertical-center {
+    margin: 0;
+    position: absolute;
+    top: 17%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  .esquerda {
+    width: 50%;
+    margin-top: 8vw;
+    float: left;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    display: block;
+  }
+  .direita h1 {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  .bem-vindo {
+    margin-bottom: 40px;
+  }
+  .mensagem-top {
+    margin-bottom: 30px;
+  }
+  .mensagem-bottom {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  .direita h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+  .login {
+    outline-style: none !important;
+    background: white;
+    color: #1A0044;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 40px;
+    width: 150px;
+    height: 40px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .login:hover {
+    box-shadow: 0px 4px 20px white;
+  }
+  .login:focus {
+    background-color: #B367FF;
+  }
+  .conheca {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    text-decoration-line: underline;
+    color: white;
+  }
+  .conheca:hover {
+    color: #7241a3;
+  }
+  .criar-conta {
+    padding-top: 30px;
+    font-weight: 500;
+    color: white;
+    text-decoration-line: underline;
+  }
+  .criar-conta:hover {
+    color: #7241a3;
+    cursor: pointer;
+  }
+  .center {
+    width: 60%;
+    margin: 0px 160px;
+    box-sizing: border-box;
+    display: block;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-top: 1rem;
+  }
+  .logo-div {
+    width: 300px;
+    height: 250px;
+  }
+  .logo {
+    width: 200px;
+    height: 250px;
+  }
+  .couch-div {
+    width: 350px;
+    height: 340px;
+  }
   .couch {
-    height: 595px;
+    height: 325px;
   }
-}
-
-.esquerda-couch {
-  margin-top: 32%;
-}
-
-.center-esquerda {
-  margin-top: -50px;
-}
-
-.login-register {
-  outline-style: none;
-  background: white;
-  color: #1A0044;
-  font-size: 15px;
-  font-weight: bold;
-  border: none;
-  border-radius: 40px;
-  width: 150px;
-  height: 40px;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-}
-
-.login-register:hover {
-  box-shadow: 0px 4px 20px white
-}
-
-.login-register:focus {
-  background-color: #B367FF;
-}
-
-.nossos-servicos-title {
-  font-weight: bold;
-  font-size: 30px;
-  color: white;
-}
-
-.buttons-right {
-  position: absolute;
-  right: 0;
-}
-
-@media (min-width: 1431px) {
+  @media (min-height: 947px) {
+    .couch {
+      height: 595px;
+    }
+  }
+  .esquerda-couch {
+    margin-top: 32%;
+  }
+  .center-esquerda {
+    margin-top: -50px;
+  }
+  .login-register {
+    outline-style: none !important;
+    background: white;
+    color: #1A0044;
+    font-size: 15px;
+    font-weight: bold;
+    border: none;
+    border-radius: 40px;
+    width: 150px;
+    height: 40px;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  }
+  .login-register:hover {
+    box-shadow: 0px 4px 20px white
+  }
+  .login-register:focus {
+    background-color: #B367FF;
+  }
+  .nossos-servicos-title {
+    font-weight: bold;
+    font-size: 30px;
+    color: white;
+    text-decoration: none !important;
+  }
+  .nossos-servicos-title:hover {
+    color: white;
+  }
   .buttons-right {
-    margin-right: 4%;
+    position: absolute;
+    right: 0;
   }
-}
-
-.button-left {
-  margin-right: 10px;
-}
-
-.conteudo-segunda {
-  margin-top: 8%;
-  text-align: center;
-}
-
-.card-services {
-  display: inline-block;
-  background: #9B36FF;
-  box-shadow: 10px 10px 11px -1px rgba(0, 0, 0, 0.5);
-  border-radius: 30px;
-  width: 200px;
-  height: 250px;
-  line-height: 250px;
-  text-align: center;
-  margin-right: 30px;
-  z-index: 14;
-}
-
-.card-title{
-  color: white;
-  font-weight: bold;
-  font-size: 25px;
-}
-
-.image-aquario {
-  height: 230px;
-  padding-bottom: 2px;
-}
-
-.segundo-image-right{
-  float: right;
-}
-
-@media (min-height: 670px) {
-  .image-aquario {
-    height: 320px;
+  @media (min-width: 1431px) {
+    .buttons-right {
+      margin-right: 4%;
+    }
   }
-}
-
-@media (min-height: 947px) {
-  .image-aquario {
-    height: 320px;
-    margin-top: 150px;
+  .button-left {
+    margin-right: 10px;
   }
-}
-
-@media (min-width: 1431px) {
-  .image-aquario {
-    margin-right: 100px;
+  .conteudo-segunda {
+    margin-top: 8%;
+    text-align: center;
   }
-}
-
-@media (min-height: 670px) {
-  .image-patas {
+  .card-services {
+    display: inline-block;
+    background: #9B36FF;
+    box-shadow: 10px 10px 11px -1px rgba(0, 0, 0, 0.5);
+    border-radius: 30px;
+    width: 200px;
     height: 250px;
+    line-height: 250px;
+    text-align: center;
+    margin-right: 30px;
+    z-index: 14;
   }
-}
-
-@media (min-height: 947px) {
-  .image-patas {
-    height: 250px;
-    margin-top: 220px;
+  .card-title {
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+    text-decoration: none !important;
   }
-}
-
-.direita-quemsomos{
-  display: block;
-  float: right;
-  width: 50%;
-  text-align: center;
-  margin-top: 10%;
-  padding-right: 35px;
-}
-
-.direita-quemsomos h1{
-  color: white;
-  font-weight: bold;
-  font-size: 40px;
-  margin-bottom: 40px;
-}
-
-.direita-quemsomos h3{
-  color: white;
-  font-weight: 500;
-  font-size: 35px;
-  line-height: 40px;
-  margin-bottom: 40px;
-}
-
-.direita-quemsomos h5{
-  color: white;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 34px;
-}
-
-@media (min-width: 1431px) {
+  .card-title:hover {
+    color: white;
+  }
+  .image-aquario {
+    height: 230px;
+    padding-bottom: 30px;
+  }
+  .segundo-image-right {
+    float: right;
+  }
+  @media (min-height: 670px) {
+    .image-aquario {
+      height: 320px;
+    }
+  }
+  @media (min-height: 947px) {
+    .image-aquario {
+      height: 320px;
+      margin-top: 150px;
+    }
+  }
+  @media (min-width: 1431px) {
+    .image-aquario {
+      margin-right: 100px;
+    }
+  }
+  @media (min-height: 670px) {
+    .image-patas {
+      height: 250px;
+    }
+  }
+  @media (min-height: 947px) {
+    .image-patas {
+      height: 250px;
+      margin-top: 220px;
+    }
+  }
   .direita-quemsomos {
-   padding-right: 50px;
+    display: block;
+    float: right;
+    width: 50%;
+    text-align: center;
+    margin-top: 10%;
+    padding-right: 35px;
   }
-}
-
-.gato {
-  display: flex;
-  margin: 0 auto;
-  height: 300px;
-}
-
-@media (min-height: 947px) {
+  .direita-quemsomos h1 {
+    color: white;
+    font-weight: bold;
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .direita-quemsomos h3 {
+    color: white;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 40px;
+    margin-bottom: 40px;
+  }
+  .direita-quemsomos h5 {
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 34px;
+  }
+  @media (min-width: 1431px) {
+    .direita-quemsomos {
+      padding-right: 50px;
+    }
+  }
   .gato {
-    margin-top: 90px;
-    height: 480px !important;
+    display: flex;
+    margin: 0 auto;
+    height: 300px;
+  }
+  @media (min-height: 947px) {
+    .gato {
+      margin-top: 90px;
+      height: 480px !important;
+    }
+  }
+  .center-esquerda-quemsomos {
+    margin-left: 30px;
+    margin-top: -50px;
+  }
+  @media (min-height: 758px) {
+    .gato {
+      height: 390px;
+    }
   }
 }
-
-.center-esquerda-quemsomos {
-  margin-left: 30px;
-  margin-top: -50px;
-}
-
-@media (min-height: 758px) {
-  .gato {
-    height: 390px;
-  }
-}
-
-
-

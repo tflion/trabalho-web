@@ -6,16 +6,131 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/index/style.css">
   <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap" rel="stylesheet">
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
   <title>Pet Care - início</title>
 </head>
 
 <body>
-  <script>
-    AOS.init();
-  </script>
-  <div class="desktop">
+  <div class="main-mobile container wrapper">
+    <div class="inicio-mobile row children">
+      <div class="col-sm-12 col-md-12 d-flex justify-content-center">
+        <div class="div-logo-mobile">
+          <img src="images/logo215x273.png" alt="Logo mobile" class="logo-mobile">
+        </div>
+      </div>
+      <div class="col-sm-12 col-md-12 text-centered-mobile">
+        <h1 class="bem-vindo-mobile">
+          Bem vindo ao Pet Care
+        </h1>
+        <h3 class="messege-mobile">
+          Tudo o que o seu pet precisa em um só lugar!
+        </h3>
+        <button class="login-mobile">
+          Faça o seu login
+        </button>
+        <h3 class="messege-mobile">
+          Ou
+        </h3>
+        <a href="#nossos-servicos-mobile" class="nossos-servicos-mobile">
+          Conheça os nossos serviços
+        </a>
+        </br>
+        <a href="" class="create-account-mobile">
+          Não possuo uma conta!
+        </a>
+      </div>
+    </div>
+    <hr>
+    <div class="content-nossos-serv-mobile children">
+      <header id="nossos-servicos-mobile" class="header-mobile">
+        <div class="row">
+          <div class="col">
+            <h1 class="title-mobile">
+              Nossos serviços
+            </h1>
+          </div>
+          <div class="col d-flex justify-content-end">
+            <button class="login-register-mobile login-servicos-button-left">Faça o seu login</button>
+            <button class="login-register-mobile">Cadastre-se</button>
+          </div>
+        </div>
+      </header>
+      <div class="nossosser-div-mobile">
+        <div class="cards-div-mobile row">
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card cards-mobile">
+              <div class="card-body">
+                Vacinas
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card cards-mobile">
+              <div class="card-body">
+                Internação
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card cards-mobile card-mobile-bottom">
+              <div class="card-body">
+                Banho e tosa
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-6">
+            <div class="card cards-mobile card-mobile-bottom">
+              <div class="card-body">
+                Hotel
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="images-serv-mobile row ">
+          <div class="col-md-6 patas-div-mobile d-flex justify-content-start">
+            <img src="images/patas.png" alt="Patas mobile" class="patas-mobile">
+          </div>
+          <div class="col-md-6 aquario-div-mobile d-flex justify-content-end">
+            <img src="images/ImageNossosServicos.png" alt="Aquario mobile" class="aquario-mobile">
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="quem-somos-mobile children">
+      <header id="nossos-servicos-mobile" class="header-mobile">
+        <div class="row">
+          <div class="col d-flex justify-content-end">
+            <button class="login-register-mobile login-servicos-button-left">Faça o seu login</button>
+            <button class="login-register-mobile">Cadastre-se</button>
+          </div>
+        </div>
+      </header>
+      <div class="content-quem-somos-mobile">
+        <div class="row content-quem-somos-mobile">
+          <div class="col-sm-12 col-md-12 text-quem-somos-mobile">
+            <h1 class="title-quem-somos-mobile">
+              Quem somos
+            </h1>
+            <h3 class="messege-quem-somos-mobile">
+              Somos uma clínica veterinária que está no mercado a mais de 15 anos. Prezamos pelo ótimo atendimento aos
+              nossos clientes e seus pets.
+            </h3>
+            <h3 class="messege-quem-somos-mobile">
+              “Nossos animais merecem uma vida saudável”
+            </h3>
+          </div>
+          <div class="col-sm-12 col-md-12 div-image-quem-somos-mobile d-flex justify-content-center">
+            <img src="images/gato.png" alt="Gato mobile" class="image-quem-somos-mobile">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="main-desktop">
     <div id="fullpage">
       <section class="vertical-scrolling">
         <div class="inicio">
@@ -108,9 +223,21 @@
       </section>
     </div>
   </div>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script>
-  <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js'></script>
-  <script type="text/javascript" src="js/index/function.js"></script>
+
+  <footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.6/jquery.fullPage.min.js'></script>
+    <script type="text/javascript" src="js/index/function.js"></script>
+  </footer>
 </body>
 
 </html>

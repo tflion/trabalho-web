@@ -1,58 +1,62 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Ubuntu', sans-serif;
 }
 
-html,body{
-    height: 100%;
-    background: linear-gradient(90deg, rgba(76,2,150,1) 0%,
-     rgba(213,71,220,1) 67%,
-     rgba(252,164,255,1) 100%);
+::selection {
+    color: #B367FF;
+    background: white;
 }
 
-.clear{
+html, body {
+    height: 100%;
+    background: linear-gradient(90deg, rgba(76, 2, 150, 1) 0%, rgba(213, 71, 220, 1) 67%, rgba(252, 164, 255, 1) 100%);
+}
+
+.clear {
     clear: both;
 }
 
-section.agendamento .conteudo-full{
+section.agendamento .conteudo-full {
     width: 100%;
     position: absolute;
     height: 100%;
 }
 
-section.agendamento .text-content{
+section.agendamento .text-content {
     width: 50%;
     float: left;
 }
-section.agendamento .form-content{
+
+section.agendamento .form-content {
     width: 50%;
     float: right;
 }
 
-section.agendamento .text-agend{
+section.agendamento .text-agend {
     color: white;
 }
 
-section.agendamento .text-agend h2{
+section.agendamento .text-agend h2 {
     font-size: 40px;
     font-weight: bold;
 }
 
-section.agendamento .text-agend p{
+section.agendamento .text-agend p {
     width: 65%;
     font-size: 30px;
     font-weight: normal;
 }
 
-section.agendamento .text-content .patas{
+section.agendamento .text-content .patas {
     width: 260px;
     height: 200px;
     padding-left: 10px;
 }
 
-section.agendamento .text-content .img-doctor{
+section.agendamento .text-content .img-doctor {
     width: 500px;
     height: 340px;
     position: absolute;
@@ -60,45 +64,44 @@ section.agendamento .text-content .img-doctor{
     left: 30px;
 }
 
-
-section.agendamento .formulario{
+section.agendamento .formulario {
     width: 70%;
     background-color: white;
     color: #AB57FF;
     border-radius: 20px;
     padding: 20px;
-    -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    margin: 8%  auto 0 auto;
+    -webkit-box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    margin: 8% auto 0 auto;
 }
 
-section.agendamento .formulario form{
+section.agendamento .formulario form {
     width: 90%;
     max-width: 420px;
     margin: 0 auto;
 }
 
-.form-wraper{
+.form-wraper {
     float: left;
     margin-top: 10px;
     padding: 0 10px;
 }
 
-.w100{
+.w100 {
     width: 100%;
 }
 
-.w50{
+.w50 {
     width: 50%;
 }
 
-section.agendamento .form-wraper span{
+section.agendamento .form-wraper span {
     font-size: 18px;
     font-weight: bold;
 }
 
-section.agendamento .form-wraper input[type=text], input[type=time], input[type=date], select{
+section.agendamento .form-wraper input[type=text], input[type=time], input[type=date], select {
     width: 100%;
     height: 50px;
     margin-top: 8px;
@@ -109,30 +112,30 @@ section.agendamento .form-wraper input[type=text], input[type=time], input[type=
     background-color: #AB57FF;
     color: white;
     font-size: 16px;
-    -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);  
+    -webkit-box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
     outline-style: none;
 }
 
-section.agendamento .form-wraper input[type=text]:hover, input[type=time]:hover, input[type=date]:hover, select:hover{
-    border: 5px solid white ;
+section.agendamento .form-wraper input[type=text]:hover, input[type=time]:hover, input[type=date]:hover, select:hover {
+    border: 5px solid white;
 }
 
-section.agendamento .form-wraper input[type=text]:focus, input[type=time]:focus, input[type=date]:focus, select:focus{
-    border: 5px solid white ;
+section.agendamento .form-wraper input[type=text]:focus, input[type=time]:focus, input[type=date]:focus, select:focus {
+    border: 5px solid white;
 }
 
-section.agendamento ::placeholder{
+section.agendamento ::placeholder {
     color: white;
     font-size: 16px;
 }
 
-section.agendamento select{
+section.agendamento select {
     cursor: pointer;
 }
 
-section.agendamento .form-wraper textarea{
+section.agendamento .form-wraper textarea {
     position: relative;
     left: -8%;
     width: 115%;
@@ -143,21 +146,21 @@ section.agendamento .form-wraper textarea{
     border: none;
     background-color: #AB57FF;
     border-radius: 35px;
-    -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    -webkit-box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
     font-size: 16px;
     color: white;
     outline-style: none;
 }
 
-section.agendamento input[type=time],input[type=date],input[type=time],input[type=time]{
-    cursor: text ; 
+section.agendamento input[type=time], input[type=date], input[type=time], input[type=time] {
+    cursor: text;
 }
 
-
 /* Se for mozilla*/
-input[type=date]{
+
+input[type=date] {
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url(../../images/Vector.png);
@@ -167,7 +170,7 @@ input[type=date]{
     cursor: pointer;
 }
 
-input[type=time]{
+input[type=time] {
     -webkit-appearance: none;
     -moz-appearance: none;
     background-image: url(../../images/clock.png);
@@ -183,6 +186,7 @@ input[type="time"]::-moz-clear-button {
 }
 
 /*   Se for Chrome ou Safari*/
+
 input[type="date"]::-webkit-calendar-picker-indicator {
     color: rgba(0, 0, 0, 0);
     opacity: 1;
@@ -208,14 +212,14 @@ input[type="time"]::-webkit-calendar-picker-indicator {
     left: -8px;
     cursor: pointer;
     -webkit-appearance: none;
-    -moz-appearance:none; /* Firefox */
+    -moz-appearance: none;
+    /* Firefox */
 }
 
-
-
-section.agendamento .form-wraper select{
+section.agendamento .form-wraper select {
     -webkit-appearance: none;
-    -moz-appearance:none; /* Firefox */
+    -moz-appearance: none;
+    /* Firefox */
     appearance: none;
     background-image: url(../../images/setaSelect.png);
     background-repeat: no-repeat;
@@ -223,28 +227,27 @@ section.agendamento .form-wraper select{
     background-position-y: 50%;
 }
 
-section.agendamento textarea:hover{
+section.agendamento textarea:hover {
     border: 5px solid white;
     font-size: 17px;
 }
 
-section.agendamento textarea:focus{
+section.agendamento textarea:focus {
     border: 5px solid white;
 }
 
-section.agendamento textarea::placeholder{
+section.agendamento textarea::placeholder {
     font-size: 17px;
     padding: 35px 15px 15px 25px;
     color: white;
 }
 
-
-section.agendamento textarea::-moz-placeholder, input[type=text]::-moz-placeholder { 
-    color:white;
+section.agendamento textarea::-moz-placeholder, input[type=text]::-moz-placeholder {
+    color: white;
     opacity: 1;
 }
 
-.form-wraper input[type=submit]{
+.form-wraper input[type=submit] {
     width: 130px;
     height: 40px;
     border-radius: 25px;
@@ -252,32 +255,30 @@ section.agendamento textarea::-moz-placeholder, input[type=text]::-moz-placehold
     color: white;
     background-color: #B367FF;
     cursor: pointer;
-    -webkit-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    -moz-box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
-    box-shadow: 3px 5px 14px 0px rgba(0,0,0,0.51);
+    -webkit-box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    -moz-box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
+    box-shadow: 3px 5px 14px 0px rgba(0, 0, 0, 0.51);
     margin-top: 20px;
     outline-style: none;
 }
 
-
-.form-wraper input[type=submit]:hover{
+.form-wraper input[type=submit]:hover {
     background-color: #B367FF;
     box-shadow: 0px 4px 20px white;
 }
 
-
-section.agendamento .logo-agendamento{
+section.agendamento .logo-agendamento {
     left: 95%;
     position: absolute;
     bottom: 10px;
 }
 
-section.agendamento .voltar a{
+section.agendamento .voltar a {
     position: relative;
     top: 8px;
     text-decoration: none;
 }
 
-section.agendamento .voltar a:hover{
+section.agendamento .voltar a:hover {
     color: #B367FF;
 }
