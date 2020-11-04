@@ -1,0 +1,53 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html,
+body {
+    background: linear-gradient(#B367FF, #A64CFF) !important;
+    margin: 0px;
+}
+
+#tabela {
+    color: white;
+}
+
+table thead,
+tfoot {
+    color: #B367FF;
+    text-align: center;
+}
+
+.nav-link {
+    color: white;
+}
+
+.menu-lateral {
+    width: min-content;
+    margin-bottom: 0vmax;
+    margin-left: 5px;
+}
+
+.servico {
+    text-align: center;
+    color: white;
+}
+
+.list-group {
+    background-color: transparent;
+    margin: 5px;
+}
+
+.navbar {
+    margin-bottom: 10px;
+}
+
+.quadro-tabela {
+    margin-top: 50px;
+}
+
+.coluna {
+    text-align: center;
+}
