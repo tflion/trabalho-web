@@ -33,35 +33,35 @@
                 <form>
                     <div class="form-wraper w100">
                         <span>Nome: </span>
-                        <input type="text" name="nome" placeholder="Informe o nome do animal...">
+                        <input type="text" name="nome" id="nome" placeholder="Informe o nome do animal..." onclick="tiraBordaNome();" onkeypress="tiraBordaNome();" onblur="validaNome();" required>
                     </div> <!--form-wraper-->
                     <div class="form-wraper w50">
                         <span>Dia: </span>
-                        <input type="date" name="dia">
+                        <input type="date"  id="data" name="dia" min="" onkeypress="tiraBordaData();" onclick="tiraBordaData();" onblur="validaData();" required>
                     </div> <!--form-wraper-->
                     <div class="form-wraper w50">
                         <span>Horário: </span>
-                        <input type="time" name="horario" value="00:00">
+                        <input type="time" name="horario" id="horario" on onkeypress="tiraBordaHorario();" onclick="tiraBordaHorario();" onblur="validaHorario();" required>
                     </div> <!--form-wraper-->
                     <div class="form-wraper w100">
                         <span>Qual seria o serviço? </span>
-                        <select name="servico" id="servico">
+                        <select name="servico" id="servico" required>
                             <option value="vacina">Vacina</option>
-                            <option value="vacina">Internação</option>
-                            <option value="vacina">Banho e Tosa</option>
-                            <option value="vacina">Hotel</option>
-                            <option value="vacina">Outro</option>
+                            <option value="internaçao">Internação</option>
+                            <option value="banhoTosa">Banho e Tosa</option>
+                            <option value="hotel">Hotel</option>
+                            <option value="outro">Outro</option>
                         </select>
                     </div> <!--form-wraper-->
                     <div class="form-wraper w100">
                         <center>
                             <span>Descrição: </span>
                         </center>
-                        <textarea name="mensagem" placeholder="Descrição do serviço desejado..."></textarea>
+                        <textarea name="mensagem"  id="mensagem" placeholder="Descrição do serviço desejado..." onkeypress="tiraBordaMensagem();validaMensagem();" onclick="tiraBordaMensagem();" required></textarea>
                     </div> <!--form-wraper-->
                     <div class="form-wraper w100">
                         <center>
-                            <input type="submit" name="enviar" value="Agendar">                   
+                            <input type="submit" name="enviar" value="Agendar" onclick="validacao();">                   
                         </center>
                     </div> <!-- from-wraper -->
                     <div class="voltar">
@@ -83,5 +83,6 @@
 </section>
 
     
+<script src="js/agendamento/functions.js"></script>
 </body>
 </html>
