@@ -4,7 +4,7 @@ function validaNome(){
     var bordaNome = document.getElementById("nome");
 
     // Validação do Nome
-    var letras = /^[A-Za-z ]+$/;
+    var letras = /^[a-záàâãéèêíïóôõöúçñ ]+$/i;
 
     if(nome == ""){
         
@@ -24,8 +24,8 @@ function validaNome(){
 
 // Validação de data
 function validaData(){
-    var data = document.getElementById("data").value;
-    bordaData = document.getElementById("data");
+    var data = document.getElementById("dia").value;
+    bordaData = document.getElementById("dia");
 
     if(data == ""){
         bordaData.style.border = "3px solid #eb4934";
@@ -66,7 +66,7 @@ function validaMensagem(){
 
 function validacao(){
     var nome = document.getElementById("nome").value;
-    var data = document.getElementById("data").value;
+    var data = document.getElementById("dia").value;
     var horario = document.getElementById("horario").value;
     var mensagem = document.getElementById("mensagem").value;
 
@@ -87,7 +87,7 @@ function tiraBordaNome(){
 }
 
 function tiraBordaData(){
-    bordaData = document.getElementById("data");
+    bordaData = document.getElementById("dia");
 
     bordaData.style.border = "none";
 

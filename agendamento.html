@@ -30,14 +30,14 @@
     
     <div class="form-content">
             <div class="formulario">
-                <form>
+                <form action="incluir.php" method="POST">
                     <div class="form-wraper w100">
                         <span>Nome: </span>
                         <input type="text" name="nome" id="nome" placeholder="Informe o nome do animal..." onclick="tiraBordaNome();" onkeypress="tiraBordaNome();" onblur="validaNome();" required>
                     </div> <!--form-wraper-->
                     <div class="form-wraper w50">
                         <span>Dia: </span>
-                        <input type="date"  id="data" name="dia" min="" onkeypress="tiraBordaData();" onclick="tiraBordaData();" onblur="validaData();" required>
+                        <input type="date"  id="dia" name="dia" min="" onkeypress="tiraBordaData();" onclick="tiraBordaData();" onblur="validaData();" required>
                     </div> <!--form-wraper-->
                     <div class="form-wraper w50">
                         <span>Horário: </span>
@@ -46,11 +46,11 @@
                     <div class="form-wraper w100">
                         <span>Qual seria o serviço? </span>
                         <select name="servico" id="servico" required>
-                            <option value="vacina">Vacina</option>
-                            <option value="internaçao">Internação</option>
-                            <option value="banhoTosa">Banho e Tosa</option>
-                            <option value="hotel">Hotel</option>
-                            <option value="outro">Outro</option>
+                            <option value="Vacina">Vacina</option>
+                            <option value="Internação">Internação</option>
+                            <option value="Banho e Tosa">Banho e Tosa</option>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Outro">Outro</option>
                         </select>
                     </div> <!--form-wraper-->
                     <div class="form-wraper w100">

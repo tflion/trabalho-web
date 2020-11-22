@@ -29,9 +29,9 @@ CREATE TABLE tb_cliente (
 CREATE TABLE tb_agendamento (
 	id 	INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NULL,
-    dia DATE NULL,
-    horario DATETIME NULL,
-    tipo_servico INT NULL,
+    dia VARCHAR(15) NULL,
+    horario VARCHAR(10) NULL,
+    tipo_servico VARCHAR(30) NULL,
     descricao VARCHAR(5000) NULL
 );
 
