@@ -51,7 +51,28 @@
                 </tr>
             </thead>
             <tbody style="text-align: center;">
-                <tr>
+            <?php
+                include_once 'conexao.php';
+                $consulta = $conn->query("SELECT id, nome, dia, horario, tipo_servico FROM tb_agendamento;");
+
+
+                while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
+                    echo "<tr>";
+                    echo "<td> {$linha['nome']} </td>";
+                    echo "<td> {$linha['dia']} </td>";
+                    echo "<td> {$linha['horario']} </td>";
+                    echo "<td> {$linha['tipo_servico']} </td>";
+                    echo "<td>
+                            <div class='btn-group' role='group' aria-label='Basic example'>
+                                <button type='button' class='btn btn-primary'>Editar</button>
+                                <a href='deletar.php?id=".$linha['id']."' type='button' class='btn btn-danger'>Remover</a>
+                                <button type='button' class='btn btn-warning'>Descrição</button>
+                            </div>
+                        </td>";
+                    
+                }
+            ?>
+                <!-- <tr>
                     <td>Tiger Nixon</td>
                     <td>20:59</td>
                     <td>27/07/2020</td>
@@ -232,7 +253,7 @@
                             <button type="button" class="btn btn-warning">Descrição</button>
                         </div>
                     </td>
-                </tr>
+                </tr> -->
             </tbody>
             <tfoot>
                 <tr>
