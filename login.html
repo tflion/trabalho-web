@@ -40,7 +40,7 @@ body{
         margin: 10px 0;
     }
 
-    form input[type=submit]{
+    form button[type=submit]{
         width: 100%;
         height: 40px;
         cursor: pointer;
@@ -50,7 +50,7 @@ body{
         border-radius: 20px;
         transition:1s;
     }
-    form input[type=submit]:hover{
+    form button[type=submit]:hover{
     background-color: #B367FF;
 
     }
@@ -78,7 +78,12 @@ body{
 <h3>LOGIN </h3>
 <input id="email" type="text" name="email" placeholder="Seu e-email..." />
 <input id= "password" type="password" name="senha" placeholder="Sua senha..."/>
-<input type= "submit" name="acao" value=" Enviar" />
+<!-- <input type= "submit" name="acao" value=" Enviar" onclick="window.location.href = ''"/> -->
+<button type="submit">
+    <a href="cliente.html">Fazer Login</a>
+</button>
+
+
 
 </form>
 <script>

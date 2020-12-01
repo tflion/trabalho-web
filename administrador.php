@@ -30,12 +30,16 @@
     </header>
 
     <nav class="menu-lateral col-md-2 d-none d-md-block sidebar" style="width: 225px; float: left;">
-        <h3 class="servico" style="text-align: center;">Serviços</h3>
+        <h3 class="servico" style="text-align: center;">Editar Dados</h3>
         <div class="list-group shadow-lg">
-            <a href="#" class="list-group-item list-group-item-action">Vacinas</a>
-            <a href="#" class="list-group-item list-group-item-action">Internação</a>
-            <a href="#" class="list-group-item list-group-item-action">Banho e Tosa</a>
-            <a href="#" class="list-group-item list-group-item-action">Hotel</a>
+            <span style="color: white;">Nome:</span>
+            <input type="text" name="name" id="name" style="border-radius: 20px; border: none;">
+            <span style="color: white;">Dia:</span>
+            <input type="text" name="horario" id="horario" style="border-radius: 20px; border: none;">
+            <span style="color: white;">Horário:</span>
+            <input type="text" name="dia" id="dia" style="border-radius: 20px; border: none;">
+            <span style="color: white;">Tipo Serviço:</span>
+            <input type="text" name="tipo_servico" id="tipo_servico" style="border-radius: 20px; border: none;">
         </div>
     </nav>
     <div>
@@ -44,8 +48,8 @@
             <thead>
                 <tr>
                     <th>Nome</th>
-                    <th>Horário</th>
                     <th>Dia</th>
+                    <th>Horário</th>
                     <th>Tipo de Serviço</th>
                     <th class="coluna-opcao">Opções</th>
                 </tr>
@@ -64,7 +68,7 @@
                     echo "<td> {$linha['tipo_servico']} </td>";
                     echo "<td>
                             <div class='btn-group' role='group' aria-label='Basic example'>
-                                <button type='button' class='btn btn-primary'>Editar</button>
+                                <a href='atualizar.php?id=".$linha['id']."?dia=".$linha['dia']."?horario=".$linha['horario']."?tipo_servico=".$linha['tipo_servico']."?nome=".$linha['nome']." type='button' class='btn btn-primary'>Editar</a>
                                 <a href='deletar.php?id=".$linha['id']."' type='button' class='btn btn-danger'>Remover</a>
                                 <button type='button' class='btn btn-warning'>Descrição</button>
                             </div>
@@ -72,188 +76,6 @@
                     
                 }
             ?>
-                <!-- <tr>
-                    <td>Tiger Nixon</td>
-                    <td>20:59</td>
-                    <td>27/07/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Rafael Nicolas</td>
-                    <td>20:51</td>
-                    <td>27/12/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>José de Assis</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>José de Assis</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Lucas Eduardo</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Daniel da Silva</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Dirceu Lopes</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Rafael de Andrade</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Raimundo Nonato</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Nonato de Souza</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Italo Miguel</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Giovanny Santos</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Jonas Rafael</td>
-                    <td>22:30</td>
-                    <td>17/02/2020</td>
-                    <td>Vacina</td>
-                    <td>
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-primary">Editar</button>
-                            <button type="button" class="btn btn-danger">Remover</button>
-                            <button type="button" class="btn btn-success">Concluir</button>
-                            <button type="button" class="btn btn-warning">Descrição</button>
-                        </div>
-                    </td>
-                </tr> -->
             </tbody>
             <tfoot>
                 <tr>
