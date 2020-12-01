@@ -32,14 +32,19 @@
     <nav class="menu-lateral col-md-2 d-none d-md-block sidebar" style="width: 225px; float: left;">
         <h3 class="servico" style="text-align: center;">Editar Dados</h3>
         <div class="list-group shadow-lg">
-            <span style="color: white;">Nome:</span>
-            <input type="text" name="name" id="name" style="border-radius: 20px; border: none;">
-            <span style="color: white;">Dia:</span>
-            <input type="text" name="horario" id="horario" style="border-radius: 20px; border: none;">
-            <span style="color: white;">Horário:</span>
-            <input type="text" name="dia" id="dia" style="border-radius: 20px; border: none;">
-            <span style="color: white;">Tipo Serviço:</span>
-            <input type="text" name="tipo_servico" id="tipo_servico" style="border-radius: 20px; border: none;">
+            <form action="atualizar.php" method="post">
+                <span value="id"></span>
+                <span style="color: white;">Nome:</span>
+                <input type="text" name="name" id="name" style="border-radius: 20px; border: none;">
+                <span style="color: white;">Dia:</span>
+                <input type="text" name="horario" id="horario" style="border-radius: 20px; border: none;">
+                <span style="color: white;">Horário:</span>
+                <input type="text" name="dia" id="dia" style="border-radius: 20px; border: none;">
+                <span style="color: white;">Tipo Serviço:</span>
+                <input type="text" name="tipo_servico" id="tipo_servico" style="border-radius: 20px; border: none;">
+                <input type="submit" value="Editar" >
+            </form>
+            
         </div>
     </nav>
     <div>
@@ -59,7 +64,6 @@
                 include_once 'conexao.php';
                 $consulta = $conn->query("SELECT id, nome, dia, horario, tipo_servico FROM tb_agendamento;");
 
-
                 while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>";
                     echo "<td> {$linha['nome']} </td>";
@@ -68,7 +72,7 @@
                     echo "<td> {$linha['tipo_servico']} </td>";
                     echo "<td>
                             <div class='btn-group' role='group' aria-label='Basic example'>
-                                <a href='atualizar.php?id=".$linha['id']."?dia=".$linha['dia']."?horario=".$linha['horario']."?tipo_servico=".$linha['tipo_servico']."?nome=".$linha['nome']." type='button' class='btn btn-primary'>Editar</a>
+                                <a href='atualizar.php?id=".$linha['id']."&dia=".$linha['dia']."&horario=".$linha['horario']."&tipo_servico=".$linha['tipo_servico']."&nome=".$linha['nome']."' type='button' class='btn btn-primary'>Editar</a>
                                 <a href='deletar.php?id=".$linha['id']."' type='button' class='btn btn-danger'>Remover</a>
                                 <button type='button' class='btn btn-warning'>Descrição</button>
                             </div>

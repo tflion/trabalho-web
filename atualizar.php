@@ -1,10 +1,10 @@
 <?php
 
-    $nome = $_GET["nome"];
-    $horario = $_GET["horario"];
-    $dia = $_GET["dia"];
-    $tipo_servico = $_GET["tipo_servico"];
-    $id = $_GET["id"];
+    $nome = $_POST["nome"];
+    $horario = $_POST["horario"];
+    $dia = $_POST["dia"];
+    $tipo_servico = $_POST["tipo_servico"];
+    $id = $_POST["id"];
 
     include_once 'conexao.php';
 
@@ -14,8 +14,8 @@
 
     // $conn = null;
 
-    // Header("Location: administrador.php")
-
+    //Header("Location: administrador.php")
+    
     try {
         $smt = $conn->prepare("UPDATE tb_agendamento SET nome = ".$nome." horario = ".$horario." dia = ".$dia."tipo_servico = ".$tipo_servico." WHERE  id = ".$id);
 
@@ -24,7 +24,7 @@
 
         $conn = null;
 
-        // Header("Location: index.html");
+        Header("Location: administrador.php");
 
         // if(mysql_query($smt,$conn)){
         //     $msg = "Atualizado com sucesso!";
