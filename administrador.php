@@ -14,14 +14,14 @@
     <header>
         <div>
             <nav class="navbar navbar-dark bg-dark navbar-expand-lg">
-                <a class="navbar-brand" href="#">PetCare</a>
+                <a class="navbar-brand" href="index.html">PetCare</a>
                 <div>
                     <div class="navbar-nav">
-                        <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(Página
+                        <a class="nav-item nav-link active" href="index.html">Home <span class="sr-only">(Página
 								atual)</span></a>
                         <a class="nav-item nav-link active" href="#">Clientes</a>
                         <a class="nav-item nav-link active" href="#">Planos</a>
-                        <a class="nav-item nav-link active" href="#">Serviços</a>
+                        <a class="nav-item nav-link active" href="servicos.html">Serviços</a>
                         <a class="nav-item nav-link active" href="#">Funcionarios</a>
                     </div>
                 </div>
