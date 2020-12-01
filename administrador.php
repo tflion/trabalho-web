@@ -53,13 +53,14 @@
                     <th>Dia</th>
                     <th>Horário</th>
                     <th>Tipo de Serviço</th>
+                    <th>Descrição</th>
                     <th class="coluna-opcao">Opções</th>
                 </tr>
             </thead>
             <tbody style="text-align: center;">
             <?php
                 include_once 'conexao.php';
-                $consulta = $conn->query("SELECT id, nome, dia, horario, tipo_servico FROM tb_agendamento;");
+                $consulta = $conn->query("SELECT id, nome, dia, horario, tipo_servico, descricao FROM tb_agendamento;");
 
                 while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>";
@@ -67,11 +68,11 @@
                     echo "<td> {$linha['dia']} </td>";
                     echo "<td> {$linha['horario']} </td>";
                     echo "<td> {$linha['tipo_servico']} </td>";
+                    echo "<td> {$linha['descricao']} </td>";
                     echo "<td>
                             <div class='btn-group' role='group' aria-label='Basic example'>
                                 <a href='atualizar.php?id=".$linha['id']."&dia=".$linha['dia']."&horario=".$linha['horario']."&tipo_servico=".$linha['tipo_servico']."&nome=".$linha['nome']."' type='button' class='btn btn-primary'>Editar</a>
                                 <a href='deletar.php?id=".$linha['id']."' type='button' class='btn btn-danger'>Remover</a>
-                                <button type='button' class='btn btn-warning'>Descrição</button>
                             </div>
                         </td>";
                     

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Cadastrar</title> 
+	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;700&display=swap" rel="stylesheet">
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+			box-sizing: border-box;
+			font-family: 'Quicksand', sans-serif;
+		}
+		html,body{
+			background-color: #B367FF;
+			height: 100%;
+		}
+		.container{
+			display: flex;
+			margin: 0 auto;
+			max-width: 1000px;
+			width: 100%;
+		}
+		.w30{
+			width: 30%;
+			}
+		.w70{
+			width: 70%;
+		}
+		.cadastro{
+			position: relative;
+			top: 20px;
+			height: 610px;
+			width: 100%;
+            margin: 0 auto;
+			background-color: white;
+			border-radius: 30px;
+		}
+		.cadastro h2{
+			padding-top: 20px;
+			 color: #AB57FF;
+			 text-align: center;
+		}
+		.dados{
+            width: 100%;
+			margin: 20px auto;
+	        max-width: 600px;
+
+		}
+		.twoinput{
+			margin-top: 10px;
+			display: flex;
+		}
+		.input1{
+			margin-right:20px;
+            font-weight: bold;
+            font-size: 15px;
+            width: 100%;
+           
+
+		}
+		.input1 input[type="text"]{
+		   padding-left: 20px;
+		   margin-top: 5px;
+		   border: 1px solid #ccc;
+		   width:  100%;
+           height: 40px;
+           background: rgba(171, 87, 255, 0.75);
+           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+           border-radius: 20px;
+
+		}
+		.input2{
+			width: 100%;
+			margin-left: 20px;
+            
+
+		}
+		.cadastro span{ 
+			 font-weight: bold;
+             font-size: 15px;
+             color: #AB57FF;
+		 }
+		.input2 input[type="text"]{
+		   margin-top: 5px;
+		   padding-left: 20px;
+		   border: 1px solid #ccc;
+		   width: 100%;
+           height: 40px;
+           background: rgba(171, 87, 255, 0.75);
+           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+           border-radius: 20px;
+
+		}
+		.oneinput{
+			margin-top: 10px;
+		}
+		.oneinput input{
+		   padding-left: 20px;
+		   margin-top: 5px;
+		   border: 1px solid #ccc;
+		   width: 100%;
+           height: 40px;
+           background: rgba(171, 87, 255, 0.75);
+           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+           border-radius: 20px;	
+		}
+		.cadastro input[type="submit"]{
+		   margin: 10px auto;
+		   display: block;
+		   border: 1px solid #ccc;
+		   width:  150px;
+           height: 40px;
+           background: rgba(171, 87, 255, 0.75);
+           box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+           border-radius: 20px;
+		}
+		.botao {
+			margin-top: 20px;
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body >
+   <section class="cadastrar">
+   	<div class="container">
+   	<div class="w30">
+   		<div class="img1">
+   			<img style="height: 250px;
+                        width:250px;
+                        position: relative;
+						left: 20px;
+						top: 20px; " src="images/pet-life.png">
+   			<img style="height: 250px;
+                        width:250px;
+                        position: relative;
+						left: 20px;
+						top: 100px;"src="images/dog-login.png">
+   		</div>
+   	</div>
+   	<div class="w70">
+   		<div class="cadastro">
+   			<h2>Cadastre-se</h2>
+   			<div class="dados">
+			<form action="incluirCliente.php" method="POST">
+   			<div class="twoinput">
+   			<div class="input1">
+   				<span>*Nome completo</span><br>
+   				<input type="text" name="nome" placeholder="Informe seu nome">
+   			</div><!--inout1-->
+   			<div class="input2">
+   				<span>*Digite seu cpf</span><br>
+   				<input type="text" name="cpf" placeholder="Informe seu cpf">
+   			</div><!--input2-->
+   		</div><!--twoinput-->
+   		<div class="oneinput">
+   			<span>*Digite seu endereço</span><br>
+   			<input type="text" name="endereco" placeholder="Informe seu endereço">
+   		</div><!--oneinput-->
+   		<div class="twoinput">
+   			<div class="input1">
+   				<span>*CEP</span><br>
+   				<input type="text" name="cep" placeholder="Informe seu CEP">
+   			</div><!--inout1-->
+   			<div class="input2">
+   				<span>*Complemento</span><br>
+   				<input type="text" name="complemento" placeholder="Complemento">
+   			</div><!--input2-->
+   		</div><!--twoinput-->
+   		<div class="oneinput">
+   			<span>*Digite seu E-mail</span><br>
+   			<input type="e-mail" name="email" placeholder="Informe seu E-mail">
+   		</div><!--oneinput-->
+   		<div class="oneinput">
+   			<span>*Confirme seu E-mail</span><br>
+   			<input type="e-mail" name="email" placeholder="Confirme seu E-mail">
+   		</div><!--oneinput-->
+   		<div class="twoinput">
+   			<div class="input1">
+   				<span>*Senha</span><br>
+   				<input type="text" name="senha" placeholder="Informe uma senha">
+   			</div><!--inout1-->
+   			<div class="input2">
+   				<span>*Confirme sua senha</span><br>
+   				<input type="text" name="c-senha" placeholder="Confirme sua senha">
+   			</div><!--input2-->
+   		</div><!--twoinput-->
+        <div class="botao">
+   		<input type="submit" name="acao" value="Cadastrar">
+   		<a onclick="window.location.href = 'index.html'">Início</a>
+        </div><!--bota-->
+   	</div><!--w70-->
+   </div><!--dados-->
+</form>
+   </div>
+   </section>
+</body>
+</html>
