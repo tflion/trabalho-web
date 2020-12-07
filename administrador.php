@@ -29,17 +29,34 @@
     <nav class="menu-lateral col-md-2 d-none d-md-block sidebar" style="width: 225px; float: left;">
         <h3 class="servico" style="text-align: center;">Editar Dados</h3>
         <div class="list-group shadow-lg">
-            <form action="atualizar.php" method="post">
-                <span value="id"></span>
+            <form action="atualizar.php" method="post" name="form">
+            <?php
+                @$id = $_GET["id"];
+                @$nome = $_GET["nome"];
+                @$dia = $_GET["dia"];
+                @$horario = $_GET["horario"];
+                @$tipo_servico = $_GET["tipo_servico"];
+                @$descricao = $_GET["descricao"];
+            ?>
                 <span style="color: white;">Nome:</span>
-                <input type="text" name="name" id="name" style="border-radius: 20px; border: none;">
+                <input type="text" name="fnome" id="name" style="border-radius: 20px; border: none;" value="<?php echo $nome; ?>">
                 <span style="color: white;">Dia:</span>
-                <input type="text" name="horario" id="horario" style="border-radius: 20px; border: none;">
+                <input type="text" name="fdia" id="dia" style="border-radius: 20px; border: none;" value="<?php echo $dia; ?>">
                 <span style="color: white;">Horário:</span>
-                <input type="text" name="dia" id="dia" style="border-radius: 20px; border: none;">
-                <span style="color: white;">Tipo Serviço:</span>
-                <input type="text" name="tipo_servico" id="tipo_servico" style="border-radius: 20px; border: none;">
-                <input type="submit" value="Editar" >
+                <input type="text" name="fhorario" id="dia" style="border-radius: 20px; border: none;" value="<?php echo $horario; ?>">
+                <span style="color: white;">Qual seria o serviço? </span>
+                        <select name="fservico" id="tipo_servico" required>
+                            <option selected="selected" value="<?php echo $tipo_servico; ?>"><?php echo $tipo_servico; ?></option>
+                            <option value="Vacina">Vacina</option>
+                            <option value="Internação">Internação</option>
+                            <option value="Banho e Tosa">Banho e Tosa</option>
+                            <option value="Hotel">Hotel</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                <span style="color: white;">Descriçãop:</span>
+                <textarea type="text" name="fdescricao" id="descricao" style="border-radius: 20px; border: none;"><?php echo $descricao; ?></textarea>
+                <input type="text" name="fid" id="fid" style="border-radius: 20px; border: none; background-color: transparent; color: transparent;" value="<?php echo $id; ?>">
+                <button type="submit" name="enviar" value="enviar" class="btn-link">Enviar</button>
             </form>
             
         </div>
@@ -49,6 +66,7 @@
         <table class="table table-dark shadow-lg dt-resposive" id="tabela" style="width: 1050px;">
             <thead>
                 <tr>
+                    <th>Id</th>
                     <th>Nome</th>
                     <th>Dia</th>
                     <th>Horário</th>
@@ -64,14 +82,15 @@
 
                 while ($linha = $consulta->fetch(PDO::FETCH_ASSOC)) {
                     echo "<tr>";
-                    echo "<td> {$linha['nome']} </td>";
-                    echo "<td> {$linha['dia']} </td>";
-                    echo "<td> {$linha['horario']} </td>";
-                    echo "<td> {$linha['tipo_servico']} </td>";
-                    echo "<td> {$linha['descricao']} </td>";
+                    echo "<td id='tid'> {$linha['id']} </td>";
+                    echo "<td id='tnome'> {$linha['nome']} </td>";
+                    echo "<td id='tdia'> {$linha['dia']} </td>";
+                    echo "<td id='thorario'> {$linha['horario']} </td>";
+                    echo "<td id='tservico'> {$linha['tipo_servico']} </td>";
+                    echo "<td id='tdescricao'> {$linha['descricao']} </td>";
                     echo "<td>
                             <div class='btn-group' role='group' aria-label='Basic example'>
-                                <a href='atualizar.php?id=".$linha['id']."&dia=".$linha['dia']."&horario=".$linha['horario']."&tipo_servico=".$linha['tipo_servico']."&nome=".$linha['nome']."' type='button' class='btn btn-primary'>Editar</a>
+                            <a href='administrador.php?id=".$linha['id']."&dia=".$linha['dia']."&horario=".$linha['horario']."&tipo_servico=".$linha['tipo_servico']."&nome=".$linha['nome']."&descricao=".$linha['descricao']."' type='button' class='btn btn-primary'>Editar</a>
                                 <a href='deletar.php?id=".$linha['id']."' type='button' class='btn btn-danger'>Remover</a>
                             </div>
                         </td>";
